@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library App</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <h1>Library</h1>
+        <img src="icons/library-outline.svg" alt="Library icons" />
+      </div>
+      <button type="button" class="testBtn" id="testBtn">Test</button>
+      <div class="addBookBtn" id="addBookBtn">
+        <img src="icons/plus.svg" alt="Add icon" />
+      </div>
+    </div>
+    <div class="main">
+      <div class="grid" id="booksGrid"></div>
+    </div>
+    <div class="footer">
+      <a href="http://">K4na</a> | <a href="http://">Source Code</a>
+    </div>
+  </body>
+  <div class="addBookModal" id="addBookModal">
+    <div class="addBookToLibraryWindow">
+      <form class="add-book-form" id="addBookForm">
+        <h3>New Book</h3>
+        <div class="container">
+          <div class="inputContainer">
+            <input type="text" name="title" id="title" placeholder="Title" />
+          </div>
+
+          <div class="inputContainer">
+            <input type="text" name="author" id="author" placeholder="Author" />
+          </div>
+
+          <div class="inputContainer">
+            <input type="number" name="pages" id="pages" placeholder="Pages" />
+          </div>
+
+          <div class="inputContainer">
+            <label for="checkbox">Read</label>
+            <input
+              type="checkbox"
+              name="isRead"
+              id="isRead"
+              title="Read"
+              value="isRead"
+            />
+          </div>
+        </div>
+
+        <button type="button" name="add-to-libraryBtn" id="add-to-libraryBtn">
+          Add to Library
+        </button>
+      </form>
+    </div>
+  </div>
+</html>

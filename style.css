@@ -1,0 +1,212 @@
+html,
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  background-color: #ddd0c8;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.5);
+}
+.header .logo {
+  display: flex;
+  align-self: center;
+  margin-left: 20px;
+}
+.header .logo h1 {
+  font-weight: 600;
+}
+.header .logo img {
+  width: 50px;
+  margin-left: 10px;
+}
+.header .addBookBtn {
+  align-self: center;
+  margin-right: 20px;
+}
+.header .addBookBtn img {
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 2px 3px orange;
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+/* Main WIndow --------------------------------------------*/
+
+.main {
+  min-height: 100%;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+}
+
+.main .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+  grid-auto-rows: 250px;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+/* CARD */
+.main .grid .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: #f1ece9;
+  box-shadow: 1px 0px 10px 2px gray;
+  padding: 20px;
+}
+.main .grid .card > div {
+  display: flex;
+}
+.main .grid .card .info {
+  display: flex;
+  flex-direction: column;
+}
+.card .info .title {
+  margin: 0;
+  margin-bottom: 0px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.card .info .pages {
+  align-self: end;
+}
+
+.grid .card .interaction {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  width: 90%;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  gap: 15px;
+}
+.grid .card .interaction .button {
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 5px 10px gray;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+  &:active {
+    transform: scale(0.98);
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+.grid .card .interaction .readBtn {
+  background-color: lightgreen;
+}
+.grid .card .interaction .delBtn {
+  background-color: red;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  padding: 15px 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 100%;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+
+/*Add new book Window*/
+.addBookModal {
+  visibility: hidden;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+  background-repeat: repeat;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.active {
+  visibility: visible;
+}
+
+.addBookToLibraryWindow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+  width: 300px;
+  height: 500px;
+  padding: 15px;
+  color: #e6e6e6;
+  background-color: #1a1818;
+  border-radius: 10px;
+}
+
+.addBookToLibraryWindow .container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.addBookToLibraryWindow h3 {
+  font-size: 35px;
+  font-weight: 200;
+  margin-top: -15px;
+}
+#addBookForm {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.addBookToLibraryWindow .inputContainer input {
+  background-color: #1a1818;
+  color: #e6e6e6;
+  border-radius: 4px;
+  border: none;
+  font-size: 20px;
+}
+
+.addBookToLibraryWindow #add-to-libraryBtn {
+  border: 0;
+  background-color: #ddd0c8;
+  color: #323232;
+  padding: 10px 50px;
+  letter-spacing: 0.05em;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 17px;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
